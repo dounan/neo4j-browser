@@ -215,12 +215,12 @@ export const StyledStatus = styled.div`
   margin-bottom: 0;
   width: 100%;
   margin-top: 3px;
-  max-height: 64px;
+  max-height: 200px;
   overflow: auto;
 `
 
 export const StyledInspectorFooterRowListPair = styled(StyledInlineListItem)`
-  vertical-align: middle;
+  vertical-align: top;
   font-size: 13px;
 `
 
