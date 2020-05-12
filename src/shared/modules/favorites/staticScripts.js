@@ -20,6 +20,16 @@
 
 export const scripts = [
   {
+    folder: 'subwaymap',
+    content: `// Select all\nMATCH (n) RETURN *`,
+    versionRange: '>=3'
+  },
+  {
+    folder: 'subwaymap',
+    content: `// Delete all\nMATCH (n) DETACH DELETE n`,
+    versionRange: '>=3'
+  },
+  {
     folder: 'basics',
     content: '// Connect to DBMS\n:server connect',
     versionRange: '0.0.0'
@@ -142,6 +152,12 @@ export const scripts = [
 ]
 
 export const folders = [
+  {
+    id: 'subwaymap',
+    name: 'SOA Subway Map',
+    isStatic: true,
+    versionRange: ''
+  },
   {
     id: 'basics',
     name: 'Basic Queries',
