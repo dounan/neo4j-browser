@@ -29,7 +29,7 @@ import graphView from '../lib/visualization/components/graphView'
 
 export class GraphComponent extends Component {
   state = {
-    zoomInLimitReached: true,
+    zoomInLimitReached: false,
     zoomOutLimitReached: false
   }
 
