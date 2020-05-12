@@ -89,7 +89,7 @@ const vizFn = function(el, measureSize, graph, layout, style) {
 
   var zoomBehavior = d3.behavior
     .zoom()
-    .scaleExtent([0.2, 1])
+    .scaleExtent([0.2, 2])
     .on('zoom', zoomed)
 
   const interpolateZoom = (translate, scale) =>
