@@ -26,12 +26,13 @@ import {
 export default function neoGraphStyle() {
   const defaultStyle = {
     node: {
-      diameter: '50px',
+      diameter: '100px',
       color: '#A5ABB6',
       'border-color': '#9AA1AC',
       'border-width': '2px',
       'text-color-internal': '#FFFFFF',
-      'font-size': '10px'
+      'font-size': '10px',
+      caption: '{name}'
     },
     relationship: {
       color: '#A5ABB6',
@@ -45,19 +46,19 @@ export default function neoGraphStyle() {
   }
   const defaultSizes = [
     {
-      diameter: '10px'
+      diameter: '60px'
     },
     {
-      diameter: '20px'
+      diameter: '70px'
     },
     {
-      diameter: '50px'
+      diameter: '100px'
     },
     {
-      diameter: '65px'
+      diameter: '115px'
     },
     {
-      diameter: '80px'
+      diameter: '130px'
     }
   ]
   const defaultIconCodes = [
@@ -327,7 +328,7 @@ export default function neoGraphStyle() {
       '')
       defaultCaption || (defaultCaption = '<id>')
       return {
-        caption: defaultCaption
+        defaultCaption
       }
     }
 

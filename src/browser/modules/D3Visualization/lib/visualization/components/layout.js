@@ -28,7 +28,7 @@ const layout = {
       init: render => {
         const forceLayout = {}
 
-        const linkDistance = 45
+        const linkDistance = 145
 
         const d3force = d3.layout
           .force()
