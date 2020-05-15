@@ -30,6 +30,48 @@ export const scripts = [
     versionRange: '>=3'
   },
   {
+    folder: 'subwaymap',
+    content: `// 1. NIS dependencies
+    MATCH (n:physicalService)
+    OPTIONAL MATCH (n)-[e]->()
+    RETURN *`,
+    versionRange: '>=3'
+  },
+  {
+    folder: 'subwaymap',
+    content: `// 2. gRPC dependencies
+    MATCH (n:grpcService)
+    OPTIONAL MATCH (n2)-[e]->(n)
+    RETURN *`,
+    versionRange: '>=3'
+  },
+  {
+    folder: 'subwaymap',
+    content: `// 3. SPS events
+    MATCH (n:simplePubSubEvent)
+    OPTIONAL MATCH (n2)-[e:CONTAINS]->(n)
+    RETURN *`,
+    versionRange: '>=3'
+  },
+  {
+    folder: 'subwaymap',
+    content: `// 4. SPS events and subscribers for one engine
+    MATCH (n {name: "rails_engine.customs"})
+    OPTIONAL MATCH (n)-[r1]->(event:simplePubSubEvent)
+    OPTIONAL MATCH (sub:simplePubSubSubscriber)-[r2]->(event)
+    RETURN *`,
+    versionRange: '>=3'
+  },
+  {
+    folder: 'subwaymap',
+    content: `// 5. [Table] SPS events and number of subscribers
+    MATCH (n:simplePubSubEvent)
+    OPTIONAL MATCH (n2:simplePubSubSubscriber)-[e]->(n)
+    RETURN n.name, COUNT(e) as num_subscribers
+    ORDER BY num_subscribers DESC`,
+    versionRange: '>=3'
+  },
+  {
     folder: 'basics',
     content: '// Connect to DBMS\n:server connect',
     versionRange: '0.0.0'
