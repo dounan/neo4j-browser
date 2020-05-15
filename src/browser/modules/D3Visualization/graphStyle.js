@@ -42,6 +42,10 @@ export default function neoGraphStyle() {
       'text-color-external': '#000000',
       'text-color-internal': '#FFFFFF',
       caption: '<type>'
+    },
+    'relationship.CONTAINS': {
+      color: '#11469e',
+      'text-color-external': '#11469e'
     }
   }
   const defaultSizes = [
