@@ -100,7 +100,7 @@ const fitCaptionIntoCircle = function(node, style) {
   const lineHeight = fontSize
   const measure = text => measureText(text, fontFamily, fontSize)
 
-  const words = captionText.split(/\s|\./)
+  const words = captionText.split(/\s|\.|_/)
 
   const emptyLine = function(lineCount, iLine) {
     let baseline = (1 + iLine - lineCount / 2) * lineHeight
