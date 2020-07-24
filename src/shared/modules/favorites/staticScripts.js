@@ -32,7 +32,7 @@ export const scripts = [
   {
     folder: 'subwaymap',
     content: `// 1. NIS dependencies
-    MATCH (n:physicalService)
+    MATCH (n:networkIsolatedService)
     OPTIONAL MATCH (n)-[e]->()
     RETURN *`,
     versionRange: '>=3'
